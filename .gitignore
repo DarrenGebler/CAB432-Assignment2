@@ -1,0 +1,10 @@
+/server/venv/
+/server/.idea/
+/client/node_modules/
+/client/build/
+/client/yarn.lock
+/client/package-lock.json
+/client/.idea
+/server/yolo/yolov3-tiny.weights
+/server/videos/
+/.idea/

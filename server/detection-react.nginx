@@ -1,0 +1,25 @@
+server {
+    listen 80;
+    root /home/ubuntu/server/static/build;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ =404;
+        add_header Cache-Control "no-cache";
+    }
+
+    location /static {
+        expires 1y;
+        add_header Cache-Control "public";
+    }
+
+    location /video {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5000;
+    }
+
+    location /video_data {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5000;
+    }
+}
