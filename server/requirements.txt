@@ -6,3 +6,4 @@ gunicorn
 opencv-python
 Flask
 boto3
+redis
