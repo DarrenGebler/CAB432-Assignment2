@@ -22,7 +22,8 @@ configPath = os.path.sep.join([config.MODEL_PATH, "yolov3-tiny.cfg"])
 net = cv2.dnn.readNetFromDarknet(configPath, weightsPath)
 
 ln = net.getLayerNames()
-ln = [ln[i[0] - 1] for i in net.getUnconnectedOutLayers()]
+
+ln = [ln[(i[0] if type(i) == list else i) - 1] for i in net.getUnconnectedOutLayers()]
 
 
 class RunDetection:
