@@ -38,10 +38,10 @@ def index():
 def get_image_data():
     file = request.files['file']
     file.save(directory + file.filename)
-    filestuff = directory + file.filename
-    s3.Bucket("n9983601-n9941835-assignment-2").upload_file(Filename=filestuff, Key="Hello.mp4")
-    for bucket in s3.Bucket("n9983601-n9941835-assignment-2").objects.all():
-        print(bucket)
+    # filestuff = directory + file.filename
+    # s3.Bucket("n9983601-n9941835-assignment-2").upload_file(Filename=filestuff, Key="Hello.mp4")
+    # for bucket in s3.Bucket("n9983601-n9941835-assignment-2").objects.all():
+    #     print(bucket)
 
     # detection_coords = r.get(hash_file(directory + file.filename))
     # if detection_coords is None:
