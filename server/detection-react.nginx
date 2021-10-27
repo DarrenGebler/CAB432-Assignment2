@@ -2,6 +2,7 @@ server {
     listen 80;
     root /home/ubuntu/server/static/build;
     index index.html;
+    client_max_body_size 64M;
 
     location / {
         try_files $uri $uri/ =404;

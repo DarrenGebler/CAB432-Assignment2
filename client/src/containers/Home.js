@@ -18,6 +18,7 @@ export default function Home() {
         await axios({
             method: 'POST',
             url: '/video_data',
+            timeout: 200000,
             data: formData,
             headers: {'Content-Type': 'multipart/form-data'}
         }).then(response => {
